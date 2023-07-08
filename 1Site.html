@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Website</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .time-container {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      margin-top: 20px;
+    }
+
+    .btn-container a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn-container a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Website</h1>
+  
+  <img class="logo" src="vt_logo.png" alt="VT Logo">
+
+  <div class="form-container">
+    <h2>Form 1</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="time-container">
+    Current Time: <span id="current-time"></span>
+  </div>
+
+  <div class="btn-container">
+    <a href="page2.html">Go to Page 2</a>
+  </div>
+
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var timeString = now.toLocaleTimeString();
+      document.getElementById('current-time').textContent = timeString;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
